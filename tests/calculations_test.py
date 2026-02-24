@@ -68,3 +68,26 @@ def test_get_nth_fibonacci_ten():
 
     # Assert
      assert result == 55
+
+def test_get_nth_fibonacci_edge_cases():
+    """Test edge cases for Fibonacci function."""
+    # Test n=0 (should return 0)
+    assert get_nth_fibonacci(0) == 0
+    
+    # Test n=1 (should return 1)
+    assert get_nth_fibonacci(1) == 1
+    
+    # Test negative number (should raise ValueError or return None)
+    # 根据您的函数实现来调整这个测试
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(-1)
+
+def test_get_nth_fibonacci_large_input():
+    """Test with larger input values."""
+    # Test n=20
+    result = get_nth_fibonacci(20)
+    assert result == 6765
+    
+    # Test n=30  
+    result = get_nth_fibonacci(30)
+    assert result == 832040
